@@ -1,10 +1,15 @@
 import React from "react";
+import AboutSection from "../components/AboutSection";
+import CompaniesSection from "../components/CompaniesSection";
+import HeroSection from "../components/HeroSection";
 
 function Homepage() {
   return (
-    <div>
-      <h1>homepage</h1>
-    </div>
+    <>
+      <HeroSection />
+      <AboutSection />
+      <CompaniesSection />
+    </>
   );
 }
 
