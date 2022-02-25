@@ -60,7 +60,7 @@ export const Line1 = styled.span`
   display: inline-block;
   width: 85%;
   height: 4px;
-  background: red;
+  background: ${({ theme }) => theme.colors.primary};
   transition: all 500ms ease;
 `;
 export const Line2 = styled(Line1)`

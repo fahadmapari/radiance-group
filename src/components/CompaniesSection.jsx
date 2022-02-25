@@ -1,5 +1,6 @@
 import CompanyCard from "./CompanyCard";
 import radianceLogo from "../assets/icons/logo-icon.png";
+import unicornLogo from "../assets/icons/unicorn-logo.png";
 import {
   CardList,
   CompaniesSectionCoatiner,
@@ -17,12 +18,12 @@ function CompaniesSection() {
           info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, inventore!"
         />
         <CompanyCard
-          name="Radiance Consultant"
-          logo={radianceLogo}
+          name="Unicorn Enterprises"
+          logo={unicornLogo}
           info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, inventore!"
         />
         <CompanyCard
-          name="Radiance Consultant"
+          name="Radiance Interiors"
           logo={radianceLogo}
           info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, inventore!"
         />
