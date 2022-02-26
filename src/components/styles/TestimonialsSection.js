@@ -24,7 +24,7 @@ export const VideoGrid = styled.div`
   margin-bottom: 5rem;
 `;
 export const Video = styled.div`
-  background: green;
+  background: lightgray;
   position: relative;
   cursor: pointer;
 `;
@@ -83,7 +83,7 @@ export const VideoOverlay = styled.div`
 `;
 
 export const VidePlayer = styled.video`
-  max-width: 800px !important;
+  width: 80% !important;
   height: auto;
   position: relative;
   top: 50%;

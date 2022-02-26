@@ -46,11 +46,12 @@ function TestimonialsSection() {
       <ViewMore>View More</ViewMore>
       {showOverlay ? (
         <VideoOverlay onClick={() => setShowOverlay(false)}>
-          <VidePlayer preload="metadata" controls>
+          <VidePlayer autoplay preload="metadata" controls>
             <source
               src="https://mazwai.com/videvo_files/video/free/2019-03/small_watermarked/190111_15_Misc_UHD_01_preview.webm#t=0.5"
               type="video/webm"
             />
+            Your browser does not support the video.
           </VidePlayer>
         </VideoOverlay>
       ) : (
