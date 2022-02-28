@@ -11,20 +11,20 @@ import {
   PortfolioText,
 } from "./styles/PortfolioSection";
 
-function Portfolio() {
+function Portfolio({image,title ,clientLogo, clientName, text}) {
   return (
     <PortfolioContainer>
       <ImageContainer>
-        <PortfolioImage />
+        <PortfolioImage src={image} />
       </ImageContainer>
 
       <PortfolioContent>
-        <PortfolioHeading></PortfolioHeading>
+        <PortfolioHeading>{title}</PortfolioHeading>
         <ClientContainer>
-          <ClientLogo />
-          <ClientName></ClientName>
+          <ClientLogo src={clientLogo} />
+          <ClientName>{clientName}</ClientName>
         </ClientContainer>
-        <PortfolioText></PortfolioText>
+        <PortfolioText>{text}</PortfolioText>
       </PortfolioContent>
     </PortfolioContainer>
   );

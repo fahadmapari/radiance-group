@@ -7,6 +7,10 @@ import {
   SubHeading,
 } from "./styles/PortfolioSection";
 
+import portfolioImage from "../assets/images/portfolio-example.png";
+import clientLogo from "../assets/icons/client-logo.png";
+import { ViewMore } from "./styles/TestimonialsSection";
+
 function PortfolioSection() {
   return (
     <PortfolioSectionContainer>
@@ -14,8 +18,27 @@ function PortfolioSection() {
       <SubHeading>Have a look on projects under our belt</SubHeading>
 
       <PortfolioList>
-        <Portfolio />
+        <Portfolio 
+          image={portfolioImage} 
+          title="Mumbra Building repair work"
+          clientLogo={clientLogo}
+          clientName="OYO"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Vestibulum sodales, purus nec hendrerit porta, felis arcu 
+          pulvinar velit, a gravida nibh nulla vel nibh."
+        />
+
+        <Portfolio 
+          image={portfolioImage} 
+          title="Mumbra Building repair work"
+          clientLogo={clientLogo}
+          clientName="OYO"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Vestibulum sodales, purus nec hendrerit porta, felis arcu 
+          pulvinar velit, a gravida nibh nulla vel nibh."
+        />
       </PortfolioList>
+      <ViewMore>VIEW ALL</ViewMore>
     </PortfolioSectionContainer>
   );
 }
