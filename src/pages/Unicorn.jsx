@@ -10,25 +10,25 @@ import ContactSection from "../components/ContactSection";
 import FooterSection from "../components/FooterSection";
 import OfferSection from "../components/OfferSection";
 
-import heroBackground from "../assets/images/landing-background.png";
-import navLogo from "../assets/icons/logo-icon.png";
+import unicornBackground from "../assets/images/unicorn-background.jpg";
+import navLogo from "../assets/icons/unicorn-logo.png";
 
 //services images
-import structArch from "../assets/images/struct-arch.png";
-import structAudit from "../assets/images/struct-audit.png";
-import projManCon from "../assets/images/project-management-consultant.png";
-import buildRepair from "../assets/images/building-repair.png";
-import costEstimate from "../assets/images/cost-estimate.png";
-import drainage from "../assets/images/drainage.png";
 
-function Consultant() {
+import buildRepair from "../assets/images/unicorn-building-repair.jpg";
+import structRetro from "../assets/images/building-repair.png";
+import waterproof from "../assets/images/unicorn-waterproof.webp";
+import civilContract from "../assets/images/civil-contract.jpeg";
+import roadConstruct from "../assets/images/road-construction.jpg";
+
+function Unicorn() {
   const [offerAvailable, SetOfferAvailable] = useState(false);
 
   const heroProps = {
     heading: "YOUR ONE STOP PLACE",
-    subHeading: "FOR ALL YOUR CONSULTING NEEDS",
-    backgroundImage: heroBackground,
+    subHeading: "FOR ALL YOUR CONTRACTING NEEDS",
     navLogo: navLogo,
+    backgroundImage: unicornBackground,
   };
 
   const offerProps = {
@@ -38,28 +38,24 @@ function Consultant() {
 
   const services = [
     {
-      serviceName: "Structural Audit",
-      serviceImage: structAudit,
-    },
-    {
-      serviceName: "Structural Design & Architectural Designing",
-      serviceImage: structArch,
-    },
-    {
-      serviceName: "Project Management Consultant",
-      serviceImage: projManCon,
-    },
-    {
-      serviceName: "Building repair consultant",
+      serviceName: "Building Repair work",
       serviceImage: buildRepair,
     },
     {
-      serviceName: "Cost Estimators for Construction Projects",
-      serviceImage: costEstimate,
+      serviceName: "Structural Strengthening & Retrofitting",
+      serviceImage: structRetro,
     },
     {
-      serviceName: "Drainage Plumbing Consultant",
-      serviceImage: drainage,
+      serviceName: "Waterproofing Specialists",
+      serviceImage: waterproof,
+    },
+    {
+      serviceName: "Civil Contracts",
+      serviceImage: civilContract,
+    },
+    {
+      serviceName: "Road Construction",
+      serviceImage: roadConstruct,
     },
   ];
 
@@ -69,7 +65,7 @@ function Consultant() {
       {offerAvailable ? <OfferSection {...offerProps} /> : ""}
       <USPSection />
       <LandingAboutSection />
-      <ServicesSection serviceList={[...services]} />
+      <ServicesSection serviceList={services} />
       <PortfolioSection />
       <TestimonialsSection />
       <ClientSection />
@@ -79,4 +75,4 @@ function Consultant() {
   );
 }
 
-export default Consultant;
+export default Unicorn;

@@ -8,13 +8,11 @@ import {
   Navlinks,
 } from "./styles/LandingNavbar";
 
-import logoIcon from "../assets/icons/logo-icon.png";
-
-function LandingNavbar() {
+function LandingNavbar({ navLogo }) {
   return (
     <NavbarContainer>
       <LogoContainer>
-        <Logo src={logoIcon} />
+        <Logo src={navLogo} />
       </LogoContainer>
 
       <Navlinks>

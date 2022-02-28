@@ -24,7 +24,7 @@ export const ServiceList = styled.div`
 `;
 
 export const Service = styled.div`
-  max-width: 45rem;
+  width: 45rem;
   border-top: 5px solid ${({ theme }) => theme.colors.primary};
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: all 150ms ease-in-out;
