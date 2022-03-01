@@ -36,10 +36,8 @@ function ContactSection() {
 
           <InputContainer>
             <InputLabel>Service</InputLabel>
-            <Select>
-              <option value="consultation" selected>
-                Consultation
-              </option>
+            <Select defaultValue="other">
+              <option value="consultation">Consultation</option>
               <option value="contracting">Contracting</option>
               <option value="interior">Interior</option>
               <option value="other">Other</option>

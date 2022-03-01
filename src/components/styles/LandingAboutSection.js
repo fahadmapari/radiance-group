@@ -16,7 +16,7 @@ export const AboutImage = styled.img`
 
 export const AboutTextContainer = styled.div`
   flex: 1;
-  padding-left: 3rem;
+  padding: 0rem 3rem;
 `;
 
 export const AboutHeading = styled.h2`

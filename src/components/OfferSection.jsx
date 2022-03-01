@@ -8,11 +8,11 @@ import {
 
 import sale from "../assets/images/sale.png";
 
-function OfferSection() {
+function OfferSection({ offerTitle, offerDesc }) {
   return (
     <OfferContainer background={sale}>
-      <OfferTitle>NEW YEAR OFFER </OfferTitle>
-      <OfferDesc>50% DISCOUNT ON CONTRACTING</OfferDesc>
+      <OfferTitle>{offerTitle}</OfferTitle>
+      <OfferDesc>{offerDesc}</OfferDesc>
       <OfferBtn>GET OFFER</OfferBtn>
     </OfferContainer>
   );

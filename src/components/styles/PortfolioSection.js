@@ -65,7 +65,7 @@ export const ClientContainer = styled.div`
 `;
 
 export const ClientLogo = styled.img`
-  width: 5rem;
+  width: 6rem;
   border-radius: 50%;
   padding: 0.5rem;
   background: white;
