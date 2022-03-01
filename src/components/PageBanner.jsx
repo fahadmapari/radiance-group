@@ -1,7 +1,11 @@
-import React from "react";
+import { BannerHeading, BannerSubHeading, PageBannerContainer } from "./styles/PageBanner";
 
-function PageBanner() {
-  return <div>PageBanner</div>;
+
+function PageBanner({bannnerHeading, bannerSubHeading, background}) {
+  return <PageBannerContainer background={background}>
+    <BannerHeading>{bannnerHeading}</BannerHeading>
+    <BannerSubHeading>{bannerSubHeading}</BannerSubHeading>
+  </PageBannerContainer>;
 }
 
 export default PageBanner;
