@@ -4,6 +4,18 @@ import PageBanner from "../components/PageBanner";
 
 import pageBannerImage from "../assets/images/testi-background.png";
 import FilterBox from "../components/FilterBox";
+import {
+  Testimonial,
+  TestimonialClientCompany,
+  TestimonialClientImage,
+  TestimonialClientInfo,
+  TestimonialClientName,
+  TestimonialClientPosition,
+  TestimonialContent,
+  TestimonialsPageSection,
+} from "../components/styles/TestimonialsPage";
+
+import person from "../assets/images/person.jpg";
 
 function TestimonialsPage() {
   return (
@@ -15,6 +27,59 @@ function TestimonialsPage() {
         background={pageBannerImage}
       />
       <FilterBox />
+
+      <TestimonialsPageSection>
+        <Testimonial>
+          <TestimonialContent></TestimonialContent>
+          <TestimonialClientInfo>
+            <TestimonialClientImage src={person} />
+            <div>
+              <TestimonialClientName>John Doe</TestimonialClientName>
+              <TestimonialClientPosition>CEO</TestimonialClientPosition>
+              <span>, </span>
+              <TestimonialClientCompany>Company</TestimonialClientCompany>
+            </div>
+          </TestimonialClientInfo>
+        </Testimonial>
+
+        <Testimonial>
+          <TestimonialContent></TestimonialContent>
+          <TestimonialClientInfo>
+            <TestimonialClientImage src={person} />
+            <div>
+              <TestimonialClientName>John Doe</TestimonialClientName>
+              <TestimonialClientPosition>CEO</TestimonialClientPosition>
+              <span>, </span>
+              <TestimonialClientCompany>Company</TestimonialClientCompany>
+            </div>
+          </TestimonialClientInfo>
+        </Testimonial>
+
+        <Testimonial>
+          <TestimonialContent></TestimonialContent>
+          <TestimonialClientInfo>
+            <TestimonialClientImage src={person} />
+            <div>
+              <TestimonialClientName>John Doe</TestimonialClientName>
+              <TestimonialClientPosition>CEO</TestimonialClientPosition>
+              <span>, </span>
+              <TestimonialClientCompany>Company</TestimonialClientCompany>
+            </div>
+          </TestimonialClientInfo>
+        </Testimonial>
+
+        <Testimonial>
+          <TestimonialContent></TestimonialContent>
+          <TestimonialClientInfo>
+            <TestimonialClientImage src={person} />
+            <div>
+              <TestimonialClientName>John Doe</TestimonialClientName>
+              <TestimonialClientPosition>CEO, </TestimonialClientPosition>
+              <TestimonialClientCompany>Company</TestimonialClientCompany>
+            </div>
+          </TestimonialClientInfo>
+        </Testimonial>
+      </TestimonialsPageSection>
     </>
   );
 }
