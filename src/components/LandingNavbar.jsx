@@ -8,9 +8,9 @@ import {
   Navlinks,
 } from "./styles/LandingNavbar";
 
-function LandingNavbar({ navLogo }) {
+function LandingNavbar({ navLogo, top }) {
   return (
-    <NavbarContainer>
+    <NavbarContainer top={top}>
       <LogoContainer>
         <Logo src={navLogo} />
       </LogoContainer>

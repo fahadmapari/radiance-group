@@ -1,22 +1,22 @@
-import LandingNavbar from "../components/LandingNavbar";
 import navLogo from "../assets/icons/logo-icon.png";
+import LandingNavbar from "../components/LandingNavbar";
 import PageBanner from "../components/PageBanner";
 
-import pageBanner from "../assets/images/portfolio-banner.png";
+import pageBannerImage from "../assets/images/testi-background.png";
 import FilterBox from "../components/FilterBox";
 
-function Portfolio() {
+function TestimonialsPage() {
   return (
     <>
       <LandingNavbar navLogo={navLogo} top={true} />
-      <PageBanner 
-        bannnerHeading="OUR PORTFOLIO" 
+      <PageBanner
+        bannnerHeading="TESTIMONIALS"
         bannerSubHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        background={pageBanner}
+        background={pageBannerImage}
       />
       <FilterBox />
     </>
   );
 }
 
-export default Portfolio;
+export default TestimonialsPage;

@@ -22,7 +22,7 @@ import costEstimate from "../assets/images/cost-estimate.png";
 import drainage from "../assets/images/drainage.png";
 
 function Consultant() {
-  const [offerAvailable, SetOfferAvailable] = useState(false);
+  const [offerAvailable, SetOfferAvailable] = useState(true);
 
   const heroProps = {
     heading: "YOUR ONE STOP PLACE",

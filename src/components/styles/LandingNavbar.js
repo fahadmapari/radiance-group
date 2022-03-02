@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  position: ${(props) => (props.top ? "absolute" : "static")};
+  position: ${(props) => (props.top ? "relative" : "absolute")};
   top: 0;
   left: 0;
   padding: 2rem ${({ theme }) => theme.paddings.sides};
