@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TestimonialsPageSection = styled.div`
   width: 90%;
-  margin: auto;
+  margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -11,7 +11,7 @@ export const TestimonialsPageSection = styled.div`
 `;
 
 export const Testimonial = styled.div`
-  width: 55rem;
+  width: 100%;
   padding: 1.5rem;
   border-radius: 25px;
   background: ${({ theme }) => theme.colors.secondary};
@@ -22,6 +22,7 @@ export const TestimonialContent = styled.div`
   height: 30rem;
   background: lightgray;
   border-radius: 25px;
+  position: relative;
 `;
 
 export const TestimonialVideo = styled.video`
@@ -29,7 +30,22 @@ export const TestimonialVideo = styled.video`
   width: 100%;
 `;
 
-export const TestimonialText = styled.p``;
+export const TestimonialText = styled.p`
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 25px;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+`;
+
+export const PlayBtn = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+`;
 
 export const TestimonialClientInfo = styled.div`
   display: flex;

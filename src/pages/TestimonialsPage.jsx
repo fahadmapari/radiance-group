@@ -5,6 +5,7 @@ import PageBanner from "../components/PageBanner";
 import pageBannerImage from "../assets/images/testi-background.png";
 import FilterBox from "../components/FilterBox";
 import {
+  PlayBtn,
   Testimonial,
   TestimonialClientCompany,
   TestimonialClientImage,
@@ -13,9 +14,16 @@ import {
   TestimonialClientPosition,
   TestimonialContent,
   TestimonialsPageSection,
+  TestimonialText,
+  TestimonialVideo,
 } from "../components/styles/TestimonialsPage";
 
 import person from "../assets/images/person.jpg";
+
+import playLogo from "../assets/icons/play-circle.png";
+import { ControlButton, ControlButtons } from "../components/styles/Portfolio";
+
+import FooterSection from "../components/FooterSection";
 
 function TestimonialsPage() {
   return (
@@ -30,7 +38,10 @@ function TestimonialsPage() {
 
       <TestimonialsPageSection>
         <Testimonial>
-          <TestimonialContent></TestimonialContent>
+          <TestimonialContent>
+            <TestimonialVideo></TestimonialVideo>
+            <PlayBtn src={playLogo} />
+          </TestimonialContent>
           <TestimonialClientInfo>
             <TestimonialClientImage src={person} />
             <div>
@@ -43,7 +54,16 @@ function TestimonialsPage() {
         </Testimonial>
 
         <Testimonial>
-          <TestimonialContent></TestimonialContent>
+          <TestimonialContent>
+            <TestimonialText>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              fuga excepturi saepe consectetur obcaecati delectus omnis aperiam
+              cupiditate ea deleniti. Nostrum in quam tempore, perferendis enim
+              dicta quidem quod unde. Illo, facilis totam doloremque amet
+              assumenda quisquam laborum, ullam atque minima sit ratione esse
+              voluptatem?
+            </TestimonialText>
+          </TestimonialContent>
           <TestimonialClientInfo>
             <TestimonialClientImage src={person} />
             <div>
@@ -80,6 +100,11 @@ function TestimonialsPage() {
           </TestimonialClientInfo>
         </Testimonial>
       </TestimonialsPageSection>
+      <ControlButtons>
+        <ControlButton disabled>PREV</ControlButton>
+        <ControlButton>NEXT </ControlButton>
+      </ControlButtons>
+      <FooterSection />
     </>
   );
 }

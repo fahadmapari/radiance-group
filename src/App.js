@@ -5,6 +5,8 @@ import Consultant from "./pages/Consultant";
 import Unicorn from "./pages/Unicorn";
 import PortfolioPage from "./pages/PortfolioPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/unicorn-enterprises" element={<Unicorn />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
+        <Route path="/about-us" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </>
   );
