@@ -32,6 +32,7 @@ export const AboutCardOne = styled.div`
   justify-content: center;
   position: relative;
   z-index: 3;
+  transition: all 150ms ease;
 `;
 
 export const AboutCardTwo = styled(AboutCardOne)`

@@ -13,8 +13,36 @@ import {
 
 import radianceLogo from "../assets/icons/logo-icon.png";
 import unicornLogo from "../assets/icons/unicorn-logo.png";
+import { useRef } from "react";
 
 function AboutPage() {
+
+  const cardOneRef = useRef(null);
+  const cardTwoRef = useRef(null);
+  const cardThreeRef = useRef(null);
+
+
+  const hoverCardAnimation = (element) => {
+    if(element === "cardOne"){
+      cardOneRef.current.style.transform = "translateY(-10%)";
+      cardTwoRef.current.style.transform = "rotateZ(10deg)";
+      cardThreeRef.current.style.transform = "rotateZ(10deg)";
+      return;
+    }
+
+    if(element === "cardTwo"){
+      cardTwoRef.current.style.transform = "translateY(-10%)";
+      cardOneRef.current.style.transform = "rotateZ(-10deg)";
+      cardThreeRef.current.style.transform = "rotateZ(10deg)";
+    }
+
+    if(element === "cardThree"){
+      cardThreeRef.current.style.transform = "translateY(-20%)";
+      cardOneRef.current.style.transform = "rotateZ(-10deg)";
+      cardTwoRef.current.style.transform = "rotateZ(-10deg)";
+    }
+  }
+
   return (
     <>
       <LandingNavbar navLogo={navLogo} top={true} />
@@ -31,13 +59,13 @@ function AboutPage() {
           </AboutText>
         </div>
         <AboutCards>
-          <AboutCardOne>
+          <AboutCardOne onMouseEnter={(e) => hoverCardAnimation("cardOne")} ref={cardOneRef}>
             <AboutCardLogo src={radianceLogo} />
           </AboutCardOne>
-          <AboutCardTwo>
+          <AboutCardTwo onMouseEnter={(e) => hoverCardAnimation("cardTwo")} ref={cardTwoRef}>
             <AboutCardLogo src={unicornLogo} />
           </AboutCardTwo>
-          <AboutCardThree>
+          <AboutCardThree onMouseEnter={(e) => hoverCardAnimation("cardThree")} ref={cardThreeRef}>
             <AboutCardLogo src={radianceLogo} />
           </AboutCardThree>
         </AboutCards>
