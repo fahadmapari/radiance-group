@@ -22,6 +22,7 @@ html,body, #root{
 a{
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 `;
 

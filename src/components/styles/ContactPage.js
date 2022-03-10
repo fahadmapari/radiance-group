@@ -11,6 +11,7 @@ export const ContactDetailContainer = styled.div`
 
 export const ContactDetails = styled.div`
   width: 90%;
+  max-width: 1500px;
   margin: auto;
   display: flex;
   flex-direction: column;

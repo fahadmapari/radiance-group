@@ -1,14 +1,18 @@
 import {
   BrandName,
+  CompanyNavlinkConatiner,
   Logo,
   LogoContainer,
   NavbarContainer,
+  NavCompaines,
+  NavCompany,
   Navlink,
   NavlinkConatiner,
   Navlinks,
 } from "./styles/Navbar";
 
 import logoIcon from "../assets/icons/radiance-logo-hori.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -21,20 +25,35 @@ function Navbar() {
         <NavlinkConatiner>
           <Navlink>Home</Navlink>
         </NavlinkConatiner>
-        <NavlinkConatiner>
+        <CompanyNavlinkConatiner>
           <Navlink>Companies</Navlink>
+          <NavCompaines>
+            <NavCompany>
+              <Link to="/radiance-consultant">Radiance Consultant</Link>
+            </NavCompany>
+            <NavCompany>
+              <Link to="/unicorn-enterprises">Unicorn Enterprises</Link>
+            </NavCompany>
+            <NavCompany>Radiance Interiors</NavCompany>
+          </NavCompaines>
+        </CompanyNavlinkConatiner>
+        <NavlinkConatiner>
+          <Link to="/portfolio">
+            <Navlink>Portfolio</Navlink>
+          </Link>
         </NavlinkConatiner>
         <NavlinkConatiner>
-          <Navlink>Portfolio</Navlink>
-        </NavlinkConatiner>
-        <NavlinkConatiner>
-          <Navlink>Testimonials</Navlink>
+          <Link to="/testimonials">
+            <Navlink>Testimonials</Navlink>
+          </Link>
         </NavlinkConatiner>
         <NavlinkConatiner>
           <Navlink>About us</Navlink>
         </NavlinkConatiner>
         <NavlinkConatiner>
-          <Navlink>Contact</Navlink>
+          <Link to="/contact">
+            <Navlink>Contact</Navlink>
+          </Link>
         </NavlinkConatiner>
       </Navlinks>
     </NavbarContainer>

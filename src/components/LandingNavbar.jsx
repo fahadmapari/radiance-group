@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   BrandName,
   Logo,
@@ -8,7 +9,34 @@ import {
   Navlinks,
 } from "./styles/LandingNavbar";
 
-function LandingNavbar({ navLogo, top }) {
+const defaultNavLinks = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Services",
+    link: "/services",
+  },
+  {
+    name: "Portfolio",
+    link: "/portfolio",
+  },
+  {
+    name: "Testimonials",
+    link: "/testimonials",
+  },
+  {
+    name: "About",
+    link: "/about-us",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+];
+
+function LandingNavbar({ navLogo, top, links = defaultNavLinks }) {
   return (
     <NavbarContainer top={top}>
       <LogoContainer>
@@ -16,27 +44,18 @@ function LandingNavbar({ navLogo, top }) {
       </LogoContainer>
 
       <Navlinks>
-        <NavlinkConatiner>
-          <Navlink>Home</Navlink>
-        </NavlinkConatiner>
-        <NavlinkConatiner>
-          <Navlink>Services</Navlink>
-        </NavlinkConatiner>
-        <NavlinkConatiner>
-          <Navlink>Portfolio</Navlink>
-        </NavlinkConatiner>
-        <NavlinkConatiner>
-          <Navlink>Testimonials</Navlink>
-        </NavlinkConatiner>
-        <NavlinkConatiner>
-          <Navlink>About us</Navlink>
-        </NavlinkConatiner>
-        <NavlinkConatiner>
-          <Navlink>Contact</Navlink>
-        </NavlinkConatiner>
+        {links.map((link) => (
+          <NavlinkConatiner>
+            <Link to={link.link}>
+              <Navlink>{link.name}</Navlink>
+            </Link>
+          </NavlinkConatiner>
+        ))}
       </Navlinks>
     </NavbarContainer>
   );
 }
+
+
 
 export default LandingNavbar;

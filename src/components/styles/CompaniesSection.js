@@ -17,6 +17,7 @@ export const CardList = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  flex-wrap: wrap;
 `;
 
 export const InfoBox = styled.div`
@@ -55,7 +56,7 @@ export const MoreInfo = styled.a`
 `;
 
 export const Card = styled.div`
-  max-width: 35rem;
+  width: 35rem;
   background: white;
   box-shadow: 0px 9px 27px -15px rgba(0, 0, 0, 0.86);
   -webkit-box-shadow: 0px 9px 27px -15px rgba(0, 0, 0, 0.86);
@@ -75,6 +76,7 @@ export const LogoContainer = styled.div`
   border-radius: 50%;
   background: ${({ theme }) => theme.colors.secondary};
   margin-bottom: 2rem;
+  width: 100%;
 `;
 
 export const Logo = styled.img`

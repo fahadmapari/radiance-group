@@ -39,7 +39,7 @@ export const NavlinkConatiner = styled.li`
   margin-left: 1.5rem;
 `;
 
-export const Navlink = styled.p`
+export const Navlink = styled.a`
   font-size: 2rem;
   font-weight: 500;
   color: white;

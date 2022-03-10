@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import {
   FragDiv,
@@ -16,9 +17,15 @@ function HeroSection() {
         <HeroContentConatiner>
           <HeroHeading>Radiance Group</HeroHeading>
           <HeroSubHeading>Enlightening Your Dreams</HeroSubHeading>
-          <HeroButton>Radiance Consultant</HeroButton>
-          <HeroButton>Unicorn Enterprises</HeroButton>
-          <HeroButton>Radiance Interiors</HeroButton>
+          <Link to="/radiance-consultant">
+            <HeroButton>Radiance Consultant</HeroButton>
+          </Link>
+          <Link to="/unicorn-enterprises">
+            <HeroButton>Unicorn Enterprises</HeroButton>
+          </Link>
+          <Link to="/">
+            <HeroButton>Radiance Interiors</HeroButton>
+          </Link>
         </HeroContentConatiner>
       </HeroContainer>
     </FragDiv>

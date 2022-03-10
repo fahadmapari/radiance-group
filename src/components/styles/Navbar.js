@@ -39,7 +39,42 @@ export const NavlinkConatiner = styled.li`
   margin-left: 1.5rem;
 `;
 
-export const Navlink = styled.p`
+export const Navlink = styled.a`
   font-size: 2rem;
   font-weight: 500;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+
+export const NavCompaines = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  position: absolute;
+  background: #292929;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  margin-top: 10px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 150ms ease-in;
+`;
+
+export const CompanyNavlinkConatiner = styled(NavlinkConatiner)`
+  &:hover ${NavCompaines} {
+    transform: scaleY(1);
+  }
+`;
+
+export const NavCompany = styled.a`
+  margin: 1rem auto;
+  color: white;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;

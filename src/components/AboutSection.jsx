@@ -9,6 +9,7 @@ import {
   ReadMoreContainer,
 } from "./styles/AboutSection";
 import logo from "../assets/icons/logo-icon.png";
+import { Link } from "react-router-dom";
 
 function AboutSection() {
   return (
@@ -25,8 +26,9 @@ function AboutSection() {
           asperiores.
         </AboutText>
         <ReadMoreContainer>
-          <ReadMore>Know More</ReadMore>
-
+          <Link to="/about-us">
+            <ReadMore>Know More</ReadMore>
+          </Link>
           <Line1 />
           <Line2 />
         </ReadMoreContainer>
