@@ -25,8 +25,7 @@ function AboutPage() {
   const hoverCardAnimation = (element) => {
     if(element === "cardOne"){
       cardOneRef.current.style.transform = "translateY(-10%)";
-      cardTwoRef.current.style.transform = "rotateZ(10deg)";
-      cardThreeRef.current.style.transform = "rotateZ(10deg)";
+      cardTwoRef.current.style.transform = "translatex(40%)";
       return;
     }
 
@@ -34,13 +33,35 @@ function AboutPage() {
       cardTwoRef.current.style.transform = "translateY(-10%)";
       cardOneRef.current.style.transform = "rotateZ(-10deg)";
       cardThreeRef.current.style.transform = "rotateZ(10deg)";
+      return;
     }
 
     if(element === "cardThree"){
-      cardThreeRef.current.style.transform = "translateY(-20%)";
-      cardOneRef.current.style.transform = "rotateZ(-10deg)";
-      cardTwoRef.current.style.transform = "rotateZ(-10deg)";
+      cardThreeRef.current.style.transform = "translateY(-10%)";
+      cardTwoRef.current.style.transform = "translateX(-40%)";
     }
+    return;
+  }
+
+  const hoverCardAnimationExit = (element) => {
+    if(element === "cardOne"){
+      cardOneRef.current.style.transform = "translateY(0%)";
+      cardTwoRef.current.style.transform = "translatex(0%)";
+      return;
+    }
+
+    if(element === "cardTwo"){
+      cardTwoRef.current.style.transform = "translateY(0%)";
+      cardOneRef.current.style.transform = "rotateZ(0deg)";
+      cardThreeRef.current.style.transform = "rotateZ(0deg)";
+      return;
+    }
+
+    if(element === "cardThree"){
+      cardThreeRef.current.style.transform = "translateY(0%)";
+      cardTwoRef.current.style.transform = "translateX(0%)";
+    }
+    return;
   }
 
   return (
@@ -59,13 +80,25 @@ function AboutPage() {
           </AboutText>
         </div>
         <AboutCards>
-          <AboutCardOne onMouseEnter={(e) => hoverCardAnimation("cardOne")} ref={cardOneRef}>
+          <AboutCardOne 
+            onMouseEnter={(e) => hoverCardAnimation("cardOne")} 
+            onMouseLeave={(e) => hoverCardAnimationExit("cardOne")} 
+            ref={cardOneRef}
+          >
             <AboutCardLogo src={radianceLogo} />
           </AboutCardOne>
-          <AboutCardTwo onMouseEnter={(e) => hoverCardAnimation("cardTwo")} ref={cardTwoRef}>
+          <AboutCardTwo 
+            onMouseEnter={(e) => hoverCardAnimation("cardTwo")} 
+            onMouseLeave={(e) => hoverCardAnimationExit("cardTwo")} 
+            ref={cardTwoRef}
+          >
             <AboutCardLogo src={unicornLogo} />
           </AboutCardTwo>
-          <AboutCardThree onMouseEnter={(e) => hoverCardAnimation("cardThree")} ref={cardThreeRef}>
+          <AboutCardThree 
+            onMouseEnter={(e) => hoverCardAnimation("cardThree")} 
+            onMouseLeave={(e) => hoverCardAnimationExit("cardThree")} 
+            ref={cardThreeRef}
+          >
             <AboutCardLogo src={radianceLogo} />
           </AboutCardThree>
         </AboutCards>
