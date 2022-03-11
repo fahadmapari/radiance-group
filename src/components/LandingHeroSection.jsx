@@ -11,10 +11,16 @@ import {
 
 import heroBackgroundElement from "../assets/icons/landing-element.png";
 
-function LandingHeroSection({ heading, subHeading, backgroundImage, navLogo }) {
+function LandingHeroSection({
+  heading,
+  subHeading,
+  backgroundImage,
+  navLogo,
+  navLinks,
+}) {
   return (
     <FragDiv>
-      <LandingNavbar navLogo={navLogo} />
+      <LandingNavbar navLogo={navLogo} links={navLinks} />
       <HeroContainer background={backgroundImage}>
         <HeroContentConatiner>
           <HeroHeading>{heading}</HeroHeading>

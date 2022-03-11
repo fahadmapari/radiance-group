@@ -29,6 +29,32 @@ function Unicorn() {
     subHeading: "FOR ALL YOUR CONTRACTING NEEDS",
     navLogo: navLogo,
     backgroundImage: unicornBackground,
+    navLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "Services",
+        link: "/services",
+      },
+      {
+        name: "Portfolio",
+        link: "/portfolio?company=unicorn-enterprises",
+      },
+      {
+        name: "Testimonials",
+        link: "/testimonials?company=unicorn-enterprises",
+      },
+      {
+        name: "About",
+        link: "/about-us",
+      },
+      {
+        name: "Contact",
+        link: "/contact",
+      },
+    ],
   };
 
   const offerProps = {

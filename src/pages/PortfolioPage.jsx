@@ -1,5 +1,6 @@
 import LandingNavbar from "../components/LandingNavbar";
 import navLogo from "../assets/icons/logo-icon.png";
+import unicornLogo from "../assets/icons/unicorn-logo.png";
 import PageBanner from "../components/PageBanner";
 
 import pageBannerImage from "../assets/images/portfolio-banner.png";
@@ -20,11 +21,14 @@ function PortfolioPage() {
   const [searchParams] = useSearchParams();
   const currentCompany = searchParams.get("company");
 
-
-
   return (
     <>
-      <LandingNavbar navLogo={navLogo} top={true} />
+      <LandingNavbar
+        navLogo={
+          currentCompany === "unicorn-enterprises" ? unicornLogo : navLogo
+        }
+        top={true}
+      />
       <PageBanner
         bannnerHeading="OUR PORTFOLIO"
         bannerSubHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit."

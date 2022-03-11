@@ -29,6 +29,32 @@ function Consultant() {
     subHeading: "FOR ALL YOUR CONSULTING NEEDS",
     backgroundImage: heroBackground,
     navLogo: navLogo,
+    navLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "Services",
+        link: "/services",
+      },
+      {
+        name: "Portfolio",
+        link: "/portfolio?company=radiance-consultant",
+      },
+      {
+        name: "Testimonials",
+        link: "/testimonials?company=radiance-consultant",
+      },
+      {
+        name: "About",
+        link: "/about-us",
+      },
+      {
+        name: "Contact",
+        link: "/contact",
+      },
+    ],
   };
 
   const offerProps = {

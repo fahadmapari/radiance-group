@@ -34,6 +34,7 @@ export const AboutCardOne = styled.div`
   position: relative;
   z-index: 3;
   transition: all 150ms ease;
+  cursor: pointer;
 `;
 
 export const AboutCardTwo = styled(AboutCardOne)`

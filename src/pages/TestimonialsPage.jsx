@@ -1,4 +1,5 @@
 import navLogo from "../assets/icons/logo-icon.png";
+import unicornLogo from "../assets/icons/unicorn-logo.png";
 import LandingNavbar from "../components/LandingNavbar";
 import PageBanner from "../components/PageBanner";
 
@@ -24,17 +25,26 @@ import playLogo from "../assets/icons/play-circle.png";
 import { ControlButton, ControlButtons } from "../components/styles/Portfolio";
 
 import FooterSection from "../components/FooterSection";
+import { useSearchParams } from "react-router-dom";
 
 function TestimonialsPage() {
+  const [searchParams] = useSearchParams();
+  const currentCompany = searchParams.get("company");
+
   return (
     <>
-      <LandingNavbar navLogo={navLogo} top={true} />
+      <LandingNavbar
+        navLogo={
+          currentCompany === "unicorn-enterprises" ? unicornLogo : navLogo
+        }
+        top={true}
+      />
       <PageBanner
         bannnerHeading="TESTIMONIALS"
         bannerSubHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         background={pageBannerImage}
       />
-      <FilterBox />
+      <FilterBox activeCompany={currentCompany} />
 
       <TestimonialsPageSection>
         <Testimonial>
