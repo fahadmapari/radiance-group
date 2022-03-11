@@ -14,8 +14,14 @@ import FooterSection from "../components/FooterSection";
 
 import portfolioImage from "../assets/images/portfolio-example.png";
 import clientLogo from "../assets/icons/client-logo.png";
+import { useSearchParams } from "react-router-dom";
 
 function PortfolioPage() {
+  const [searchParams] = useSearchParams();
+  const currentCompany = searchParams.get("company");
+
+
+
   return (
     <>
       <LandingNavbar navLogo={navLogo} top={true} />
@@ -25,7 +31,7 @@ function PortfolioPage() {
         background={pageBannerImage}
       />
 
-      <FilterBox />
+      <FilterBox activeCompany={currentCompany} />
       <PortfolioList>
         <Portfolio
           image={portfolioImage}
