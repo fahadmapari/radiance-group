@@ -23,37 +23,31 @@ function Navbar() {
 
       <Navlinks>
         <NavlinkConatiner>
-          <Navlink>Home</Navlink>
+          <Navlink to="/">Home</Navlink>
         </NavlinkConatiner>
         <CompanyNavlinkConatiner>
-          <Navlink>Companies</Navlink>
+          <Navlink to="#">Companies</Navlink>
           <NavCompaines>
-            <NavCompany>
-              <Link to="/radiance-consultant">Radiance Consultant</Link>
+            <NavCompany to="/radiance-consultant">
+              Radiance Consultant
             </NavCompany>
-            <NavCompany>
-              <Link to="/unicorn-enterprises">Unicorn Enterprises</Link>
+            <NavCompany to="/unicorn-enterprises">
+              Unicorn Enterprises
             </NavCompany>
-            <NavCompany>Radiance Interiors</NavCompany>
+            <NavCompany to="/">Radiance Interiors</NavCompany>
           </NavCompaines>
         </CompanyNavlinkConatiner>
         <NavlinkConatiner>
-          <Link to="/portfolio">
-            <Navlink>Portfolio</Navlink>
-          </Link>
+          <Navlink to="/portfolio">Portfolio</Navlink>
         </NavlinkConatiner>
         <NavlinkConatiner>
-          <Link to="/testimonials">
-            <Navlink>Testimonials</Navlink>
-          </Link>
+          <Navlink to="/testimonials">Testimonials</Navlink>
         </NavlinkConatiner>
         <NavlinkConatiner>
-          <Navlink>About us</Navlink>
+          <Navlink to="/about-us">About us</Navlink>
         </NavlinkConatiner>
         <NavlinkConatiner>
-          <Link to="/contact">
-            <Navlink>Contact</Navlink>
-          </Link>
+          <Navlink to="/contact">Contact</Navlink>
         </NavlinkConatiner>
       </Navlinks>
     </NavbarContainer>

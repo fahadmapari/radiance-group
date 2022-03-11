@@ -45,17 +45,13 @@ function LandingNavbar({ navLogo, top, links = defaultNavLinks }) {
 
       <Navlinks>
         {links.map((link) => (
-          <NavlinkConatiner>
-            <Link to={link.link}>
-              <Navlink>{link.name}</Navlink>
-            </Link>
+          <NavlinkConatiner key={link.name}>
+            <Navlink to={link.link}>{link.name}</Navlink>
           </NavlinkConatiner>
         ))}
       </Navlinks>
     </NavbarContainer>
   );
 }
-
-
 
 export default LandingNavbar;

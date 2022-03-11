@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const NavbarContainer = styled.nav`
@@ -39,7 +40,7 @@ export const NavlinkConatiner = styled.li`
   margin-left: 1.5rem;
 `;
 
-export const Navlink = styled.a`
+export const Navlink = styled(Link)`
   font-size: 2rem;
   font-weight: 500;
   color: white;

@@ -49,7 +49,7 @@ export const HeroSubHeading = styled.h2`
   font-size: calc(5rem + 1.5vw);
 `;
 
-export const HeroButton = styled.a`
+export const HeroButton = styled.p`
   font-size: 2.5rem;
   font-weight: 500;
   border: 2px solid transparent;

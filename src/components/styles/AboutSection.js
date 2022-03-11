@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import heroBackground from "../../assets/images/about-background.png";
 
@@ -49,7 +50,7 @@ export const ReadMoreContainer = styled.div`
   }
 `;
 
-export const ReadMore = styled.p`
+export const ReadMore = styled(Link)`
   font-size: 3rem;
   font-weight: 600;
   display: inline-block;

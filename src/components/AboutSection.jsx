@@ -26,9 +26,8 @@ function AboutSection() {
           asperiores.
         </AboutText>
         <ReadMoreContainer>
-          <Link to="/about-us">
-            <ReadMore>Know More</ReadMore>
-          </Link>
+          <ReadMore to="/about-us">Know More</ReadMore>
+
           <Line1 />
           <Line2 />
         </ReadMoreContainer>
