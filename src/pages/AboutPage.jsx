@@ -37,6 +37,7 @@ import featureElement from "../assets/images/about-feature-element.png";
 import person from "../assets/images/person.jpg";
 
 import FooterSection from "../components/FooterSection";
+import { Link } from "react-router-dom";
 
 function AboutPage() {
   const cardOneRef = useRef(null);
@@ -101,27 +102,33 @@ function AboutPage() {
           </AboutText>
         </div>
         <AboutCards>
-          <AboutCardOne
-            onMouseEnter={(e) => hoverCardAnimation("cardOne")}
-            onMouseLeave={(e) => hoverCardAnimationExit("cardOne")}
-            ref={cardOneRef}
-          >
-            <AboutCardLogo src={radianceLogo} />
-          </AboutCardOne>
-          <AboutCardTwo
-            onMouseEnter={(e) => hoverCardAnimation("cardTwo")}
-            onMouseLeave={(e) => hoverCardAnimationExit("cardTwo")}
-            ref={cardTwoRef}
-          >
-            <AboutCardLogo src={unicornLogo} />
-          </AboutCardTwo>
-          <AboutCardThree
-            onMouseEnter={(e) => hoverCardAnimation("cardThree")}
-            onMouseLeave={(e) => hoverCardAnimationExit("cardThree")}
-            ref={cardThreeRef}
-          >
-            <AboutCardLogo src={radianceLogo} />
-          </AboutCardThree>
+          <Link to="/radiance-consultant">
+            <AboutCardOne
+              onMouseEnter={(e) => hoverCardAnimation("cardOne")}
+              onMouseLeave={(e) => hoverCardAnimationExit("cardOne")}
+              ref={cardOneRef}
+            >
+              <AboutCardLogo src={radianceLogo} />
+            </AboutCardOne>
+          </Link>
+          <Link to="/unicorn-enterprises">
+            <AboutCardTwo
+              onMouseEnter={(e) => hoverCardAnimation("cardTwo")}
+              onMouseLeave={(e) => hoverCardAnimationExit("cardTwo")}
+              ref={cardTwoRef}
+            >
+              <AboutCardLogo src={unicornLogo} />
+            </AboutCardTwo>
+          </Link>
+          <Link to="/">
+            <AboutCardThree
+              onMouseEnter={(e) => hoverCardAnimation("cardThree")}
+              onMouseLeave={(e) => hoverCardAnimationExit("cardThree")}
+              ref={cardThreeRef}
+            >
+              <AboutCardLogo src={radianceLogo} />
+            </AboutCardThree>
+          </Link>
         </AboutCards>
       </AboutPageTopSection>
 

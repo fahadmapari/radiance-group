@@ -20,6 +20,7 @@ import projManCon from "../assets/images/project-management-consultant.png";
 import buildRepair from "../assets/images/building-repair.png";
 import costEstimate from "../assets/images/cost-estimate.png";
 import drainage from "../assets/images/drainage.png";
+import { HashLink } from "react-router-hash-link";
 
 function Consultant() {
   const [offerAvailable, SetOfferAvailable] = useState(true);
@@ -36,7 +37,7 @@ function Consultant() {
       },
       {
         name: "Services",
-        link: "/services",
+        link: "/radiance-consultant#services",
       },
       {
         name: "Portfolio",
@@ -100,6 +101,7 @@ function Consultant() {
       <TestimonialsSection />
       <ClientSection />
       <ContactSection />
+      <HashLink to="/radiance-consultant#services">go to services</HashLink>
       <FooterSection />
     </>
   );

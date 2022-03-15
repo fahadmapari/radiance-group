@@ -31,6 +31,40 @@ function TestimonialsPage() {
   const [searchParams] = useSearchParams();
   const currentCompany = searchParams.get("company");
 
+  const customNavLinks = [
+    {
+      name: "Home",
+      link: currentCompany !== null ? `/${currentCompany}` : "/",
+    },
+    {
+      name: "Services",
+      link:
+        currentCompany !== null ? `/${currentCompany}#services` : "/services",
+    },
+    {
+      name: "Portfolio",
+      link:
+        currentCompany !== null
+          ? `/portfolio?company=${currentCompany}`
+          : "/portfolio",
+    },
+    {
+      name: "Testimonials",
+      link:
+        currentCompany !== null
+          ? `/testimonials?company=${currentCompany}`
+          : "/testimonials",
+    },
+    {
+      name: "About",
+      link: "/about-us",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+  ];
+
   return (
     <>
       <LandingNavbar
@@ -38,13 +72,14 @@ function TestimonialsPage() {
           currentCompany === "unicorn-enterprises" ? unicornLogo : navLogo
         }
         top={true}
+        links={customNavLinks}
       />
       <PageBanner
         bannnerHeading="TESTIMONIALS"
         bannerSubHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         background={pageBannerImage}
       />
-      <FilterBox activeCompany={currentCompany} />
+      <FilterBox path="testimonials" activeCompany={currentCompany} />
 
       <TestimonialsPageSection>
         <Testimonial>

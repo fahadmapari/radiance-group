@@ -46,7 +46,9 @@ function LandingNavbar({ navLogo, top, links = defaultNavLinks }) {
       <Navlinks>
         {links.map((link) => (
           <NavlinkConatiner key={link.name}>
-            <Navlink to={link.link}>{link.name}</Navlink>
+            <Navlink smooth to={link.link}>
+              {link.name}
+            </Navlink>
           </NavlinkConatiner>
         ))}
       </Navlinks>

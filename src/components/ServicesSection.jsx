@@ -13,7 +13,7 @@ import ServiceElement from "./ServiceElement";
 
 function ServicesSection({ serviceList }) {
   return (
-    <ServiceSectionConatiner>
+    <ServiceSectionConatiner id="services">
       <Heading>SERVICES WE OFFER</Heading>
 
       <ServiceList>

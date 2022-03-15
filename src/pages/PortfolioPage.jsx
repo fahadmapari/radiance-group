@@ -21,6 +21,40 @@ function PortfolioPage() {
   const [searchParams] = useSearchParams();
   const currentCompany = searchParams.get("company");
 
+  const customNavLinks = [
+    {
+      name: "Home",
+      link: currentCompany !== null ? `/${currentCompany}` : "/",
+    },
+    {
+      name: "Services",
+      link:
+        currentCompany !== null ? `/${currentCompany}#services` : "/services",
+    },
+    {
+      name: "Portfolio",
+      link:
+        currentCompany !== null
+          ? `/portfolio?company=${currentCompany}`
+          : "/portfolio",
+    },
+    {
+      name: "Testimonials",
+      link:
+        currentCompany !== null
+          ? `/testimonials?company=${currentCompany}`
+          : "/testimonials",
+    },
+    {
+      name: "About",
+      link: "/about-us",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+  ];
+
   return (
     <>
       <LandingNavbar
@@ -28,6 +62,7 @@ function PortfolioPage() {
           currentCompany === "unicorn-enterprises" ? unicornLogo : navLogo
         }
         top={true}
+        links={customNavLinks}
       />
       <PageBanner
         bannnerHeading="OUR PORTFOLIO"
@@ -35,7 +70,7 @@ function PortfolioPage() {
         background={pageBannerImage}
       />
 
-      <FilterBox activeCompany={currentCompany} />
+      <FilterBox path="portfolio" activeCompany={currentCompany} />
       <PortfolioList>
         <Portfolio
           image={portfolioImage}
