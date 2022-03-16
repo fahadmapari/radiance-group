@@ -47,7 +47,7 @@ function PortfolioPage() {
     },
     {
       name: "About",
-      link: "/about-us",
+      link: currentCompany !== null ? `/${currentCompany}#about` : "/about-us",
     },
     {
       name: "Contact",

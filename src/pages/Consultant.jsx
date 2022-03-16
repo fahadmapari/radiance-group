@@ -49,7 +49,7 @@ function Consultant() {
       },
       {
         name: "About",
-        link: "/about-us",
+        link: "/radiance-consultant#about",
       },
       {
         name: "Contact",

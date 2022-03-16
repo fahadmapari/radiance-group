@@ -12,7 +12,7 @@ import aboutImage from "../assets/images/about-image.png";
 
 function LandingAboutSection() {
   return (
-    <LandingAboutContainer>
+    <LandingAboutContainer id="about">
       <AboutImageContainer>
         <AboutImage src={aboutImage} />
       </AboutImageContainer>
